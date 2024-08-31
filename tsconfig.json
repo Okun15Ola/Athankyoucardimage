@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                  // Specifies ECMAScript target version
+    "lib": ["dom", "dom.iterable", "esnext"],         // Include necessary libraries
+    "allowJs": true,                                  // Allow JavaScript files to be compiled
+    "skipLibCheck": true,                             // Skip type checking of declaration files
+    "esModuleInterop": true,                          // Enables emit interoperability between CommonJS and ES Modules
+    "allowSyntheticDefaultImports": true,             // Allow default imports from modules with no default export
+    "strict": true,                                   // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,         // Disallow inconsistently-cased references to the same file
+    "module": "esnext",                               // Use the latest module syntax (ES6)
+    "moduleResolution": "node",                       // Use Node.js module resolution
+    "resolveJsonModule": true,                        // Allow importing .json files
+    "isolatedModules": true,                          // Ensure each file is treated as a separate module
+    "noEmit": true,                                   // Do not emit compiled files; useful when using a bundler
+    "jsx": "react-jsx",                               // Enable the new JSX transform for React
+    "baseUrl": ".",                                   // Base directory for resolving non-relative module names
+    "paths": {                                        // Add path aliasing if needed
+      "@components/*": ["src/components/*"]
+    }
+  },
+  "include": ["src"],                                 // Include all files in the 'src' directory
+  "exclude": ["node_modules", "**/*.spec.ts"]         // Exclude node_modules and test files
+}

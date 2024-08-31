@@ -82,13 +82,11 @@ const ImageDetailPage: React.FC = () => {
 
                     
                         ctx.textBaseline = 'top'; 
-                        ctx.fillText(myText, canvas.width / 2, 20); // 20px from the top
+                        ctx.fillText(myText, canvas.width / 2, 20); 
 
-                        // Draw the user input text below the "Thank You" text
-                        ctx.textBaseline = 'top'; // Ensure text starts from the top
-                        ctx.fillText(text, canvas.width / 2, 500); // 60px from the top
+                        ctx.textBaseline = 'top';
+                        ctx.fillText(text, canvas.width / 2, 500);
 
-                        // Create a link to download the canvas image
                         canvas.toBlob((blob) => {
                             if (blob) {
                                 const link = document.createElement('a');

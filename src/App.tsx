@@ -6,7 +6,7 @@ import ImageDetailPage from './ImageDetailPage/ImageDetailPage';
 
 function App() {
   return (
-    <div className="App bg-[#000]">
+    <div className="App bg-[#000] h-full">
       <Router>
           <Routes>
               <Route path="/" element={<ImagePage />} />

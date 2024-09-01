@@ -24,7 +24,7 @@ const ImagePage: React.FC = () => {
     const navigate = useNavigate();
 
     const BASEURL = 'https://api.unsplash.com';
-    const ACCESS_KEY = 'QjZWVc8N--Q0810-zd6Ey-W9usR0oolMrIcfqKFBC0w';
+    const ACCESS_KEY = 'NmcFBsuuu8AKP-A8pRXZj8ASXN6KvITw4-k2kU1txF0';
 
     useEffect(() => {
         const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -114,11 +114,13 @@ const ImagePage: React.FC = () => {
 
     return (
         <main>
-            <div className='flex flex-row items-center justify-center text-4xl pt-[40px]'>
+            <div className='flex flex-col gap-4 mb-4 items-center justify-center text-4xl sm:4xl pt-[40px]'>
                 <h2 className="mx-10 md:text-2xl text-white font-bold">
-                    <span className="animate-pulse text-blue-500">Welcome</span> to your image generator
+                    <span className="animate-pulse text-blue-500 md:text-4xl">Welcome</span> to your image generator
                 </h2>
+
             </div>
+            <h2 className='text-white text-center md:text-4xl sm:text-3xl'>Pick any random image you love and create your THANK YOU CARD with your Beutiful name on it 😁</h2>
             <div className='flex flex-row flex-wrap justify-center items-center gap-10 mt-20'>
                 {images.map((image) => (
                     <div key={image.id} className="relative group overflow-hidden w-[18rem] h-[18rem]">

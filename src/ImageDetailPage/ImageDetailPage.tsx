@@ -16,7 +16,7 @@ const ImageDetailPage: React.FC = () => {
     const [size, setSize] = useState<number>(20);
     const [error, setError] = useState<string | null>(null);
     const [text, setText] = useState<string>('');
-    const [myText, setMyText] = useState<string>('Thank You');
+    const [myText, setMyText] = useState<string>('');
     const [rangeLimits, setRangeLimits] = useState({ min: 77, max: 80 });
 
     const BASEURLN = 'https://api.unsplash.com/photos';

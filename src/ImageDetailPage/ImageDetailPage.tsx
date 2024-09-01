@@ -127,7 +127,7 @@ const ImageDetailPage: React.FC = () => {
                 type="text"
                 value={text}
                 onChange={handleChange}
-                placeholder="Enter text here"
+                placeholder="Enter your Name here .."
                 className="border border-gray-300 p-2 mb-4 w-64"
             />
             <input
@@ -146,7 +146,7 @@ const ImageDetailPage: React.FC = () => {
                     max={rangeLimits.max}
                     value={size}
                     onChange={(e) => setSize(Number(e.target.value))}
-                    className="w-64"
+                    className="w-60"
                 />
                 <span className="text-white">{size}%</span>
             </div>

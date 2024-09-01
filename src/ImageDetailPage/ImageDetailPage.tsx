@@ -20,7 +20,7 @@ const ImageDetailPage: React.FC = () => {
     const [rangeLimits, setRangeLimits] = useState({ min: 77, max: 80 });
 
     const BASEURLN = 'https://api.unsplash.com/photos';
-    const ACCESS_KEYS = 'NmcFBsuuu8AKP-A8pRXZj8ASXN6KvITw4-k2kU1txF0';
+    const ACCESS_KEYS = 'HxIKWiG902cRmnd6uzTua7bfWd4gzqWO84sGAc0GK4s';
 
     useEffect(() => {
         const fetchImage = async () => {

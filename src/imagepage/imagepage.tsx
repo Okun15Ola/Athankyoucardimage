@@ -24,7 +24,7 @@ const ImagePage: React.FC = () => {
     const navigate = useNavigate();
 
     const BASEURL = 'https://api.unsplash.com';
-    const ACCESS_KEY = 'NmcFBsuuu8AKP-A8pRXZj8ASXN6KvITw4-k2kU1txF0';
+    const ACCESS_KEY = 'HxIKWiG902cRmnd6uzTua7bfWd4gzqWO84sGAc0GK4s';
 
     useEffect(() => {
         const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

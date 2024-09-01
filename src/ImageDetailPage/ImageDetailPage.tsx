@@ -85,7 +85,7 @@ const ImageDetailPage: React.FC = () => {
                         ctx.fillText(myText, canvas.width / 2, 20); 
 
                         ctx.textBaseline = 'top';
-                        ctx.fillText(text, canvas.width / 2, 500);
+                        ctx.fillText(text, canvas.width / 2, 350);
 
                         canvas.toBlob((blob) => {
                             if (blob) {

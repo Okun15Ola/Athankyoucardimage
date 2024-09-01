@@ -18,6 +18,7 @@ const ImageDetailPage: React.FC = () => {
     const [text, setText] = useState<string>('');
     const [myText, setMyText] = useState<string>('');
     const [rangeLimits, setRangeLimits] = useState({ min: 77, max: 80 });
+    const [textColor, setTextColor] = useState<string>('#ffffff'); // Default to white color
 
     const BASEURLN = 'https://api.unsplash.com/photos';
     const ACCESS_KEYS = 'HxIKWiG902cRmnd6uzTua7bfWd4gzqWO84sGAc0GK4s';
@@ -70,22 +71,20 @@ const ImageDetailPage: React.FC = () => {
                     const ctx = canvas.getContext('2d');
 
                     if (ctx) {
-                      
                         canvas.width = img.width;
                         canvas.height = img.height;
 
                         ctx.drawImage(img, 0, 0);
 
                         ctx.font = '30px Arial';
-                        ctx.fillStyle = 'white';
+                        ctx.fillStyle = textColor; // Use the selected color
                         ctx.textAlign = 'center'; 
 
-                    
                         ctx.textBaseline = 'top'; 
                         ctx.fillText(myText, canvas.width / 2, 20); 
 
                         ctx.textBaseline = 'top';
-                        ctx.fillText(text, canvas.width / 2, 350);
+                        ctx.fillText(text, canvas.width / 2, 420);
 
                         canvas.toBlob((blob) => {
                             if (blob) {
@@ -110,6 +109,10 @@ const ImageDetailPage: React.FC = () => {
 
     const handleChangeText = (event: React.ChangeEvent<HTMLInputElement>) => {
         setMyText(event.target.value);
+    };
+
+    const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTextColor(event.target.value); // Update the text color state
     };
 
     if (!image) return (<p>Loading.....</p>);
@@ -137,6 +140,17 @@ const ImageDetailPage: React.FC = () => {
                 placeholder={myText}
                 className="border border-gray-300 p-2 mb-4 w-64"
             />
+            <div className="flex flex-row items-center justify-center">
+            <label htmlFor="size" className="mr-2 text-white">Choose color</label>
+            <input 
+                type="color" 
+                value={textColor} 
+                onChange={handleColorChange} 
+                className="border border-gray-300 p-2 mb-4 w-16"
+                title="Choose Text Color"
+            />
+            </div>
+            
             <div className="mt-4">
                 <label htmlFor="size" className="mr-2 text-white">Resize:</label>
                 <input
